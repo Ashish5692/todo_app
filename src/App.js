@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Provider } from "react-redux";
 import TodoForm from "./components/ToDoForm/ToDoForm";
 import TodoList from "./components/ToDoList/ToDoList";
-import {store} from "./redux/store"
+import {store} from "./redux/store";  //getting store as an object
 
 import './App.css';
 

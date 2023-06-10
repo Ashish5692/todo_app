@@ -1,9 +1,12 @@
 //import actions
 import { ADD_TODO,TOGGLE_TODO} from "../actions/todoAction";
 
-//create initial state--object where we can have collection of objects
+//create initial state in our store--object where we can have collection of objects
 const initialState = {
-    todos: []
+    todos: [
+        {text: "Meeting at 9", completed:true},
+        {text: "Lunch at 2", completed: false},
+    ]
 }
 
 export function todoReducer(state= initialState,action){
@@ -40,7 +43,7 @@ export function todoReducer(state= initialState,action){
                 //if it matches we toggle the completed status
                 todos: state.todos.map((todo,i) =>{
                     //we match i with action.index because at that we are going to recieve the payload from dispatcher
-                    if(i==action.index){
+                    if(i===action.index){
                         todo.completed = !todo.completed
                     }
                     return todo; //return todo data from map function as map function will take that todo and creates new array
