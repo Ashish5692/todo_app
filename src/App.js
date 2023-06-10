@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Provider } from "react-redux";
 import TodoForm from "./components/ToDoForm/ToDoForm";
 import TodoList from "./components/ToDoList/ToDoList";
+import {store} from "./redux/store"
 
 import './App.css';
 
@@ -20,11 +22,14 @@ function App() {
 
   return (
     <div>
-      <h1 style={{ color: '#333', textAlign: 'center', marginBottom: '20px' }}>ToDo App</h1>
+      <h1>ToDo App</h1>
 
+      {/* Provider is redux element coming from react redux */}
+      <Provider store={store}> 
       {/* passing action that is createTodo function */}
       <TodoForm onCreateTodo={createTodo} />  
       <TodoList todos={todos} onToggle={toggleTodo} />
+      </Provider>
     </div>
   );
 }
