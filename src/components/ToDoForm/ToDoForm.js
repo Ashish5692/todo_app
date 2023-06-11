@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ToDoForm.css";
 import { useDispatch } from "react-redux"; // hook for accessing redux dispatch actions ,,no need of store //earlier in vanilla js we had used store.dispatch fn directly
-import {addTodo} from "../../redux/actions/todoAction"
+import {addTodo} from "../../redux/actions/todoActions"
 
 function ToDoForm() {
   const [todoText, setTodoText] = useState("");

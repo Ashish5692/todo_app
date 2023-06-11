@@ -1,5 +1,5 @@
 //import actions
-import { ADD_TODO,TOGGLE_TODO} from "../actions/todoAction";
+import { ADD_TODO,TOGGLE_TODO} from "../actions/todoActions";
 
 //create initial state in our store--object where we can have collection of objects
 const initialState = {

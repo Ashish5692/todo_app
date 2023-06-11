@@ -1,4 +1,4 @@
-import { toggleTodo } from "../../redux/actions/todoAction";
+import { toggleTodo } from "../../redux/actions/todoActions";
 import "./ToDoList.css";
 import { useSelector,useDispatch } from "react-redux"; //useDisapatch to dispatch an action
 
