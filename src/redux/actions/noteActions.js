@@ -1,6 +1,6 @@
 //action constants
-const ADD_NOTE = "Add Note";
-const DELETE_NOTE = "Delete Note";
+export const ADD_NOTE = "Add Note";
+export const DELETE_NOTE = "Delete Note";
 
 //action creators -- arrow functions which take payload which you need to pass from component along with the action
 //so our addNote action will take text payload then it will add text and type

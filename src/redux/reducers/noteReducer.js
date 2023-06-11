@@ -13,7 +13,7 @@ const initialState = {
 //for this create note reducer which will take state and action as parameter and those actions should be implemented on that state
 
 //exporting it so that it can be used in store
-export function Reducer(state=initialState,action){
+export function noteReducer(state=initialState,action){
 
     switch(action.type){
         case ADD_NOTE:
@@ -29,7 +29,7 @@ export function Reducer(state=initialState,action){
                 ]
             }
         case DELETE_NOTE:
-            state.notes.splice(index,1); //splice fn to delete function from array.index meand position and number of elements we want to delete is 1
+            state.notes.splice(action.index,1); //splice fn to delete function from array.index meand position and number of elements we want to delete is 1
             return{
                 ...state, //returning everything from existing state
                 notes: state.notes //note swhich are now modified
