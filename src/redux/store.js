@@ -12,7 +12,7 @@ import {noteReducer} from "./reducers/noteReducer";
 const result = combineReducers({
     //combining todo and note reducers
     //todo will be key and todoReducer as value which we have imported
-    todos: todoReducer,
-    notes: noteReducer
+    todoReducer,
+    noteReducer
 }) 
 export const store = redux.createStore(result); //now store will configure both of our reducers

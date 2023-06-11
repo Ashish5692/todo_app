@@ -5,7 +5,7 @@ import { useSelector,useDispatch } from "react-redux"; //useDisapatch to dispatc
 function ToDoList() {
 
   //useSelector --hook to access the redux store's state 
-  const todos = useSelector((state)=> state.todos); //useSelctor hook //use this beacause we shold not use store in every component beacause of abstraction(hiding store at backend)
+  const todos = useSelector((state)=> state.todoReducer.todos); //useSelctor hook //use this beacause we shold not use store in every component beacause of abstraction(hiding store at backend)
   // const todos = store.getState().todos;          //same result as above 
    const dispatch = useDispatch();  //calling useDispatch function to get access to store dispatch function
 

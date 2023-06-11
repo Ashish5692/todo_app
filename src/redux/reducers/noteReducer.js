@@ -32,7 +32,7 @@ export function noteReducer(state=initialState,action){
             state.notes.splice(action.index,1); //splice fn to delete function from array.index meand position and number of elements we want to delete is 1
             return{
                 ...state, //returning everything from existing state
-                notes: state.notes //note swhich are now modified
+                notes: [...state.notes] //notes which are now modified
             }
 
         default:
