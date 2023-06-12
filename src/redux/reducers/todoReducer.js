@@ -1,7 +1,7 @@
 //import actions --now no need when using redux toolkit
 //import { ADD_TODO,TOGGLE_TODO} from "../actions/todoActions";
 
-const { createSlice } = require("@reduxjs/toolkit")
+const { createSlice } = require("@reduxjs/toolkit");
 
 //create initial state in our store--object where we can have collection of objects
 const initialState = {
