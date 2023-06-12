@@ -33,6 +33,8 @@ const noteSlice = createSlice({
 
 export const noteReducer = noteSlice.reducer; //Reducer is a property and Slice which is created from createSlice() function gives access to reducer property which can access actions and state n all.
 
+export const actions = noteSlice.actions; //actions are now part of noteSlice now
+
 // Reducer using Redux
 
 //creating Reducer function which will be pure function and it will have 3 actions-- add a note,delete a note and default action to return the state

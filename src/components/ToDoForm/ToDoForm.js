@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./ToDoForm.css";
 import { useDispatch } from "react-redux"; // hook for accessing redux dispatch actions ,,no need of store //earlier in vanilla js we had used store.dispatch fn directly
-import {addTodo} from "../../redux/actions/todoActions"
+//import {addTodo} from "../../redux/actions/todoActions";
+import { actions } from "../../redux/reducers/todoReducer";
+
+//import styles from "./ToDoForm.module.css";
 
 function ToDoForm() {
   const [todoText, setTodoText] = useState("");
@@ -13,7 +16,7 @@ function ToDoForm() {
     setTodoText("");
     //using dispatch function --  it needs an action function calladdToDo
     //this function as an action will be dispatched to reducer --then reducer will update the state and then when store is updated we will update the consumer components(reading data from store--here it is todoList)
-    dispatch(addTodo(todoText)) ; //todo text will be passed as an argument
+    dispatch(actions.add(todoText)) ; //todo text will be passed as an argument
   };
 
   return (

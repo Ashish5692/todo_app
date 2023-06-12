@@ -1,6 +1,9 @@
-import { toggleTodo } from "../../redux/actions/todoActions";
-import "./ToDoList.css";
+//import { toggleTodo } from "../../redux/actions/todoActions";
+import { actions } from "../../redux/reducers/todoReducer";
+
+//import styles from "./ToDoList.module.css"
 import { useSelector,useDispatch } from "react-redux"; //useDisapatch to dispatch an action
+
 
 function ToDoList() {
 
@@ -18,7 +21,7 @@ function ToDoList() {
           <span className={todo.completed ? 'completed':'pending'}>{todo.completed ? 'Completed': 'Pending'}</span>
           <button className="btn btn-warning"
           //it will call the toggle function get that object .pass that object to dispatch and then goes to reducer.Reducer(inside todoReducer.js) based on index position is toggling the completed stats
-          onClick={()=>{dispatch(toggleTodo(index))}} //calling toggleTodo function and whatever result we are getting that result is passed onto dispatcher here
+          onClick={()=>{dispatch(actions.toggle(index))}} //calling toggleTodo function and whatever result we are getting that result is passed onto dispatcher here
           >Toggle</button>
           </li>
       ))}

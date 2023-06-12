@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./NoteForm.css";
 import { useDispatch } from "react-redux";
-import { addNote } from "../../redux/actions/noteActions";
+//import { addNote } from "../../redux/actions/noteActions";
+import { actions } from "../../redux/reducers/todoReducer";
 
 //we are directly taling with store now so we have removed the props which we were recieving in NoteForm
 //and we have used dispatch function to dispatch the add Note action
@@ -11,7 +12,8 @@ function NoteForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addNote(noteText))     // we will call the dispatch function with add note function ..in dispatch we will pass that addNote action creator and in that addNote it is expecting text which we are storing in state 
+    //dispatch(addNote(noteText))     // we will call the dispatch function with add note function ..in dispatch we will pass that addNote action creator and in that addNote it is expecting text which we are storing in state 
+    dispatch(actions.add(noteText)); //calling actions.add with payload which is noteText here
     setNoteText("");
   };
 
