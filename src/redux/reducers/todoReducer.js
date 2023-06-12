@@ -45,9 +45,9 @@ const todoSlice = createSlice({
         }
         //this completes our todo reducers with redux toolkit
     
-})
+});
 
-
+export const todoReducer = todoSlice.reducer;
 
 // Reducer using Redux
 

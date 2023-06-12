@@ -31,7 +31,7 @@ const noteSlice = createSlice({
     }
 })
 
-
+export const noteReducer = noteSlice.reducer; //Reducer is a property and Slice which is created from createSlice() function gives access to reducer property which can access actions and state n all.
 
 // Reducer using Redux
 
