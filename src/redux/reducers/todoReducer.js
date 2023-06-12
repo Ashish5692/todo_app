@@ -52,6 +52,8 @@ export const todoReducer = todoSlice.reducer;
 //we are exporting both the actions so that they can be imported in components
 export const actions = todoSlice.actions; //action is property from that Slice that gives us acess to all the actions we have defined
 
+//selector
+export const todoSelector = (state)=> state.todoReducer.todos;
 
 // Reducer using Redux
 

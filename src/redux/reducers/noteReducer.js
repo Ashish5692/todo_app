@@ -35,6 +35,10 @@ export const noteReducer = noteSlice.reducer; //Reducer is a property and Slice 
 
 export const actions = noteSlice.actions; //actions are now part of noteSlice now
 
+//selector
+export const noteSelector = (state)=> state.noteReducer.notes; //this arrow fn takes state as parameter(whatever we have in list component we have moved all here).From that state it goes to noteReducer and then it access all notes we have
+
+
 // Reducer using Redux
 
 //creating Reducer function which will be pure function and it will have 3 actions-- add a note,delete a note and default action to return the state
