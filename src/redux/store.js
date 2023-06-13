@@ -6,6 +6,7 @@
 import {todoReducer} from "./reducers/todoReducer";
 import {noteReducer} from "./reducers/noteReducer";
 import { configureStore } from "@reduxjs/toolkit";
+import { notificationReducer } from "./reducers/notificationReducer";
 
 //using combine reducers 
 //in this we have reducer map object we basically have keys and values where key will be  name of reducer and  then exact reducer you want to map with it
@@ -27,7 +28,9 @@ export const store = configureStore({
     //It can take multiple reducers insdie single Reducer object
     reducer:{
         todoReducer,
-        noteReducer
+        noteReducer,
+        notificationReducer
+
     }
 })
 

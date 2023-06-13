@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./ToDoForm.css";
-import { useDispatch } from "react-redux"; // hook for accessing redux dispatch actions ,,no need of store //earlier in vanilla js we had used store.dispatch fn directly
+import { useDispatch ,useSelector} from "react-redux"; // hook for accessing redux dispatch actions ,,no need of store //earlier in vanilla js we had used store.dispatch fn directly
 //import {addTodo} from "../../redux/actions/todoActions";
 import { actions } from "../../redux/reducers/todoReducer";
+import { notificationSelector } from "../../redux/reducers/notificationReducer";
 
 //import styles from "./ToDoForm.module.css";
 
@@ -10,6 +11,7 @@ function ToDoForm() {
   const [todoText, setTodoText] = useState("");
   //call the dispatch
   const dispatch = useDispatch();
+  const message = useSelector(notificationSelector)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +23,13 @@ function ToDoForm() {
 
   return (
     <div className="container">
+      {//if message is available then render alert notification
+        message &&
+        <div class="alert alert-success" role="alert">
+        {message}
+        </div>
+      }
+      
       
     <form onSubmit={handleSubmit}>
       <input
