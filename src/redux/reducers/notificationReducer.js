@@ -31,11 +31,20 @@ const notificationSlice = createSlice({
     //here we are specifying that for this action which belong to some other reducer please execute this reducer
     //we can directly import the action
     //2 parameter is reducer .our reducerfunction will be state and action--it will add the msg that todo is created
+
     extraReducers:(builder)=>{
-        builder.addCase(actions.add, (state,action)=>{
+        builder.addCase(actions .add, (state,action)=>{
             state.message = "Todo is created";
         })
     }
+
+    //2nd recommended way to create extraReducers using map Object
+    // extraReducers:{
+    //     //map objects:[key]: value
+    //     [actions.add]: (state,action)=>{
+    //         state.message= "Todo is created";
+    //     }
+    // }
 
 });
 
