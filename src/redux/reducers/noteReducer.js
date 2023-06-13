@@ -6,8 +6,8 @@ const { createSlice } = require("@reduxjs/toolkit");
 //initial state for the notes
 const initialState = {
     notes:[
-        { text:"Hey i am writing the note",createdOn: new Date()},
-        { text:"I enjoy going to gym",createdOn: new Date()}
+        { text:"Hey i am writing the note",createdOn: new Date().toDateString()},
+        { text:"I enjoy going to gym",createdOn: new Date().toDateString()}
     ]
 };
 

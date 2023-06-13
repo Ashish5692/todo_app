@@ -21,7 +21,7 @@ const todoSlice = createSlice({
     //in reducers we define our action and what we will do insidee actions -in todo we have 2 actions -addtodo and toggle todo
     reducers:{
         //for add key we will define a function
-        //this is add action
+        //this is add action or add action creators 
         //state allow to acess state and todo values and action allow to get any data dispatched from component
         //redux toolkit gives another action that is payload(in payload whatever data we pass from component) payload property of action to acess the text
         add:(state,action)=>{
