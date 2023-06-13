@@ -3,7 +3,7 @@ import "./ToDoForm.css";
 import { useDispatch ,useSelector} from "react-redux"; // hook for accessing redux dispatch actions ,,no need of store //earlier in vanilla js we had used store.dispatch fn directly
 //import {addTodo} from "../../redux/actions/todoActions";
 import { actions } from "../../redux/reducers/todoReducer";
-import { notificationSelector } from "../../redux/reducers/notificationReducer";
+import { notificationSelector, resetNotification } from "../../redux/reducers/notificationReducer";
 
 //import styles from "./ToDoForm.module.css";
 
@@ -12,6 +12,13 @@ function ToDoForm() {
   //call the dispatch
   const dispatch = useDispatch();
   const message = useSelector(notificationSelector)
+
+  if(message){
+    //setTimeOut takes 2 actions- first parameter is action/function we want to perform and second is time in milliseconds
+    setTimeout(()=>{
+      dispatch(resetNotification());
+    },3000);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
